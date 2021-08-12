@@ -74,26 +74,24 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Card buildWikiCard() {
-    const uri='http://rsywx.com';
+    const uri = 'http://rsywx.com';
     return Card(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              ListTile(
-                leading: Icon(
-                    Icons.real_estate_agent_outlined,
-                  size: 50,
-                  color: Colors.pinkAccent,
-                ),
-                title: Text('维客'),
-                subtitle: Text('浏览所有'),
-                onTap: () => _launch(uri),
-              )
-            ],
-          )
-        );
+        child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        ListTile(
+          leading: Icon(
+            Icons.real_estate_agent_outlined,
+            size: 50,
+            color: Colors.pinkAccent,
+          ),
+          title: Text('维客'),
+          subtitle: Text('浏览所有'),
+          onTap: () => _launch(uri),
+        )
+      ],
+    ));
   }
-
 
   Card buildReadCard() {
     return Card(
@@ -107,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               size: 50,
             ),
             title: Text('读书'),
-            subtitle: Text('浏览所有'),
+            subtitle: Text('截止2021年08月13日，共有读书笔记150篇。单击此处浏览全部。'),
           )
         ],
       ),
@@ -121,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           const ListTile(
             leading: Icon(
-                Icons.book_rounded,
+              Icons.book_rounded,
               color: Colors.green,
               size: 50,
             ),
@@ -134,14 +132,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Card buildBlogCard() {
-    const uri='https://blog.rsywx.net';
+    const uri = 'https://blog.rsywx.net';
     return Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ListTile(
             leading: Icon(
-                Icons.article_rounded,
+              Icons.article_rounded,
               size: 50,
               color: Colors.cyan,
             ),
@@ -158,7 +156,3 @@ class _MyHomePageState extends State<MyHomePage> {
     await launch(url);
   }
 }
-
-
-
-
