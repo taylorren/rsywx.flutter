@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               size: 50,
             ),
             title: Text('藏书'),
-            subtitle: Text('浏览所有'),
+            subtitle: Text('截止2021年08月13日，共藏书1150册。单击此处浏览全部。'),
           )
         ],
       ),
