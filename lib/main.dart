@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.pinkAccent,
           ),
           title: Text('维客'),
-          subtitle: Text('浏览所有'),
+          subtitle: Text('任氏有无轩维客成立于2018年。是所有大型项目的存档处。'),
           onTap: () => _launch(uri),
         )
       ],
