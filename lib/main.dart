@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -80,8 +81,8 @@ class _MyHomePageState extends State<MyHomePage> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         ListTile(
-          leading: Icon(
-            Icons.real_estate_agent_outlined,
+          leading: FaIcon(
+            FontAwesomeIcons.cookieBite,
             size: 50,
             color: Colors.pinkAccent,
           ),
@@ -99,8 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const ListTile(
-            leading: Icon(
-              Icons.mark_chat_read,
+            leading: FaIcon(
+              FontAwesomeIcons.glasses,
               color: Colors.amber,
               size: 50,
             ),
@@ -118,8 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const ListTile(
-            leading: Icon(
-              Icons.book_rounded,
+            leading: FaIcon(
+              FontAwesomeIcons.book,
               color: Colors.green,
               size: 50,
             ),
@@ -138,8 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ListTile(
-            leading: Icon(
-              Icons.article_rounded,
+            leading: FaIcon(
+              FontAwesomeIcons.pen,
               size: 50,
               color: Colors.cyan,
             ),
