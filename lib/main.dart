@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'CardBuilder/ReadCard.dart';
+import 'CardBuilder/WikiCard.dart';
+import 'CardBuilder/BookCard.dart';
+import 'CardBuilder/BlogCard.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,76 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: GridView.count(
         crossAxisCount: 2,
         children: <Widget>[
-          buildBookCard(),
+          BookCard(),
           ReadCard(),
-          buildBlogCard(),
-          buildWikiCard(),
+          BlogCard(),
+          WikiCard(),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-
-  Card buildWikiCard() {
-    const uri = 'http://rsywx.com';
-    return Card(
-        child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        ListTile(
-          leading: FaIcon(
-            FontAwesomeIcons.cookieBite,
-            size: 50,
-            color: Colors.pinkAccent,
-          ),
-          title: Text('维客'),
-          subtitle: Text('任氏有无轩维客成立于2018年。是所有大型项目的存档处。'),
-          onTap: () => _launch(uri),
-        )
-      ],
-    ));
-  }
-
-  Card buildBookCard() {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            leading: FaIcon(
-              FontAwesomeIcons.book,
-              color: Colors.green,
-              size: 50,
-            ),
-            title: Text('藏书'),
-            subtitle: Text('截止2021年08月13日，共藏书1150册。单击此处浏览全部。'),
-          )
-        ],
-      ),
-    );
-  }
-
-  Card buildBlogCard() {
-    const uri = 'https://blog.rsywx.net';
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          ListTile(
-            leading: FaIcon(
-              FontAwesomeIcons.pen,
-              size: 50,
-              color: Colors.cyan,
-            ),
-            title: Text('博客'),
-            subtitle: Text('浏览所有'),
-            onTap: () => _launch(uri),
-          )
-        ],
-      ),
-    );
-  }
-
-  void _launch(String url) async {
-    await launch(url);
   }
 }
