@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'CardBuilder/ReadCard.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -66,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisCount: 2,
         children: <Widget>[
           buildBookCard(),
-          buildReadCard(),
+          ReadCard(),
           buildBlogCard(),
           buildWikiCard(),
         ],
@@ -92,25 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ],
     ));
-  }
-
-  Card buildReadCard() {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            leading: FaIcon(
-              FontAwesomeIcons.glasses,
-              color: Colors.amber,
-              size: 50,
-            ),
-            title: Text('读书'),
-            subtitle: Text('截止2021年08月13日，共有读书笔记150篇。单击此处浏览全部。'),
-          )
-        ],
-      ),
-    );
   }
 
   Card buildBookCard() {
