@@ -13,7 +13,7 @@ class _ReadCardState extends State<ReadCard> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Map<String, dynamic>>(
-        future: getReading(),
+        future: getRead(),
         builder: (BuildContext context,
             AsyncSnapshot<Map<String, dynamic>> snapshot) {
           if (snapshot.hasData) {
@@ -32,7 +32,7 @@ class _ReadCardState extends State<ReadCard> {
                       size: 50,
                     ),
                     title: Text('读书'),
-                    subtitle: Text('截止XXX，评论了$hc本书籍，撰写了$rc篇书评。'),
+                    subtitle: Text('当前，评论了$hc本书籍，撰写了$rc篇书评。'),
                   )
                 ],
               ),
