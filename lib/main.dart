@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'CardBuilder/ReadCard.dart';
@@ -5,7 +7,20 @@ import 'CardBuilder/WikiCard.dart';
 import 'CardBuilder/BookCard.dart';
 import 'CardBuilder/BlogCard.dart';
 
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
+
 void main() {
+  if (Platform.isWindows) {
+    HttpOverrides.global = new MyHttpOverrides();
+  }
+
   runApp(MyApp());
 }
 
