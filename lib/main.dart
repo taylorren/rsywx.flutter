@@ -17,9 +17,9 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 void main() {
-  if (Platform.isWindows) {
+  /*if (Platform.isWindows) {
     HttpOverrides.global = new MyHttpOverrides();
-  }
+  }*/
 
   runApp(MyApp());
 }
